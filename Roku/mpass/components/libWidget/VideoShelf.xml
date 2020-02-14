@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="VideoShelf" extends="Group"
+	xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+	<script type="text/brightscript"
+		uri="pkg:/components/libWidget/VideoShelf.brs" />
+
+	<interface>
+		<field id="content" type="node" onChange="setSize()" />
+		<field id="height" type="int" onChange="setSize" />
+		<field id="width" type="int" onChange="setSize" />
+		<function name="refreshFocus" />
+	</interface>
+	
+	<children>
+		<Rectangle id="contentRoot" color="0x000000FF" focusable="true" />
+	</children>
+</component>

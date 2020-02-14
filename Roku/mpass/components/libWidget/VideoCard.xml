@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="VideoCard" extends="Group"
+	xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+	<script type="text/brightscript"
+		uri="pkg:/components/libWidget/VideoCard.brs" />
+
+	<interface>
+		<field id="content" type="node" onChange="setContent" />
+		<field id="height" type="int" onChange="setHeight" />
+		<field id="highlight" type="bool" onChange="setHighlight" />
+	</interface>
+
+	<children>
+		<Rectangle id="root" color="0x000000">
+			<Poster id="thumbnail" translation="[0, 0]" />
+			<Label id="title" horizAlign="left" vertAlign="center"
+				color="0xFFFFFF">
+				<Font role="font" uri="pkg:/fonts/Roboto-Bold.ttf" size="24" />
+			</Label>
+			<Label id="description" font="font:SmallestSystemFont"
+				horizAlign="left" vertAlign="center" color="0xFFFFFF" maxLines="2"
+				numLines="2" wrap="true" lineSpacing="0">
+				<Font role="font" uri="pkg:/fonts/Roboto-Regular.ttf" size="18" />
+			</Label>
+		</Rectangle>
+		<Poster id="border" uri="pkg:/images/focus.9.png"
+			translation="[0, 0]" visible="false"/>
+	</children>
+</component>

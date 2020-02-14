@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="VideoDeck" extends="Group"
+	xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+	<script type="text/brightscript"
+		uri="pkg:/components/libWidget/VideoDeck.brs" />
+
+	<interface>
+		<field id="content" type="node" onChange="setContent" />
+		<field id="height" type="int" onChange="setSize" />
+		<field id="width" type="int" onChange="setSize" />
+		<field id="currentItem" type="int" value="-1" />
+		<field id="active" type="bool" onChange="setActive"/>
+		<field id="history" type="assocarray"/>
+		<function name="loadInstance"/>
+	</interface>
+
+	<children>
+		<Rectangle id="shadow" color="0x000000" focusable="true">
+			<Rectangle id="root" color="0x000000">
+				<Label id="title" horizAlign="left" vertAlign="center"
+					color="0xFFFFFF">
+					<Font role="font" uri="pkg:/fonts/Roboto-Bold.ttf" size="24" />
+				</Label>
+				<Rectangle id="contentRoot" color="0x000000" />
+			</Rectangle>
+		</Rectangle>
+	</children>
+</component>
