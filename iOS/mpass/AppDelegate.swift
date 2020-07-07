@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  mpass
-//
-//  Created by wtao on 12/2/19.
-//  Copyright © 2019 wtao. All rights reserved.
-//
-
 import UIKit
 import CoreData
 import RedFast
@@ -17,7 +9,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        PromotionManager.initPromotion(appId: "74f72649-0327-4911-bd21-a4cd533cec1c", userId: "123")
+        IAPHelper.shared.getProducts()
+        PromotionManager.initPromotion(appId: "2f261737-29e0-40c0-8c1d-8c63e4d4d1a8", userId: "123")
         return true
     }
 
