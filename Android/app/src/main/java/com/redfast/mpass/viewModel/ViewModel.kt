@@ -1,12 +1,12 @@
-package com.example.mpass.viewModel
+package com.redfast.mpass.viewModel
 
 import androidx.databinding.BaseObservable
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
-import com.example.mpass.api.Video
-import com.example.mpass.model.TmdbModels
+import com.redfast.mpass.api.Video
+import com.redfast.mpass.model.TmdbModels
 
 data class Genre(
     val id: Int,

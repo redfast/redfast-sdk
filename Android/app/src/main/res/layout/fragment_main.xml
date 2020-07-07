@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <variable name="fragment" type="com.example.mpass.MainFragment"/>
+        <variable name="fragment" type="com.redfast.mpass.MainFragment"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,7 +35,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/unsubscribe"
                 android:layout_width="72dp"
                 android:layout_height="36dp"
                 android:background="#000000"
@@ -56,52 +56,16 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.43" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="256dp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/billboards"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_marginTop="10dp"
-            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@id/guideline3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/constraintLayout"
-            app:layout_constraintBottom_toBottomOf="@id/guideline3"
-            app:srcCompat="@drawable/the_mandalorian" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="100dp"
-            android:text="THE MANDALORIAN"
-            android:textColor="#FF9602"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:text="The travails of a lone gunfighter in the outer reaches of the galaxy"
-            android:textColor="#FFFFFF"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-        <Button
-            android:id="@+id/playButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:background="#00FFFFFF"
-            android:text="Play"
-            android:textAlignment="viewStart"
-            android:textColor="#0499AF"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            android:focusable="true"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -110,7 +74,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@id/billboards"
+            android:focusable="true"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

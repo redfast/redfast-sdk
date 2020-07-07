@@ -1,4 +1,4 @@
-package com.example.mpass.api
+package com.redfast.mpass.api
 
 import androidx.annotation.Keep
 import com.squareup.moshi.Json

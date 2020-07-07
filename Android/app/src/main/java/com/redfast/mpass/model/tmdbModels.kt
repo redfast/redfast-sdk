@@ -1,10 +1,10 @@
-package com.example.mpass.model
+package com.redfast.mpass.model
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.mpass.api.GenreVideos
-import com.example.mpass.api.Genres
-import com.example.mpass.api.TmdbApi
+import com.redfast.mpass.api.GenreVideos
+import com.redfast.mpass.api.Genres
+import com.redfast.mpass.api.TmdbApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
