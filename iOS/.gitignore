@@ -1,3 +1,6 @@
 **/xcuserdata
 **/xcshareddata
-**/mpass.xcdatamodeId
+**/*.xcworkspacedata
+**/mpass.xcdatamodeld
+Cartfile.resolved
+**/Carthage/
