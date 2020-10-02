@@ -215,6 +215,12 @@ class MainFragment : Fragment() {
                 }
             }
         binding.fragment = this
+        binding.unsubscribe.setOnFocusChangeListener { view: View, hasFocus: Boolean ->
+            if (hasFocus)
+                view.setBackgroundColor(Color.WHITE)
+            else
+                view.setBackgroundColor(Color.TRANSPARENT)
+        }
         binding.unsubscribe.requestFocus()
         PromotionManager.setScreenName(binding.root, "ViewController") {}
         return binding.root
@@ -235,12 +241,5 @@ class MainFragment : Fragment() {
                 }
             }
         }
-    }
-
-    fun onFocus(view: View, hasFocus: Boolean) {
-        if (hasFocus)
-            view.setBackgroundColor(Color.WHITE)
-        else
-            view.setBackgroundColor(Color.TRANSPARENT)
     }
 }
