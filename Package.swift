@@ -21,19 +21,26 @@ let package = Package(
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.5.0")),
         .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "5.0.1"),
         .package(url: "https://github.com/mxcl/PromiseKit", from: "6.8.0"),
+        
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
             name: "RedFast",
-            url: "https://github.com/redfast/redfast-sdk/releases/download/1.0.11/RedFast.xcframework.zip",
-            checksum: "87b13b27604f40c8068ca825c7cf00de7474205e80816ffa3db81e31d9648ea7"
-        ),
+            dependencies: ["Alamofire", "PromiseKit", "SwiftyJSON"],
+            resources: [
+                .process("Resources")
+            ],
+            url: "https://github.com/redfast/redfast-sdk/releases/download/1.0.12/RedFast.xcframework.zip",
+            checksum: "c448a9368c11daad56a4b75c3e01a145f5e8cafdb6ff73eb3f1cc15178f6639a"),
         .binaryTarget(
             name: "RedFast_TV",
-            url: "https://github.com/redfast/redfast-sdk/releases/download/1.0.11/RedFast.xcframework.zip",
-            checksum: "87b13b27604f40c8068ca825c7cf00de7474205e80816ffa3db81e31d9648ea7"
-        )
+            dependencies: ["Alamofire", "PromiseKit", "SwiftyJSON"],
+            resources: [
+                .process("Resources")
+            ],
+            url: "https://github.com/redfast/redfast-sdk/releases/download/1.0.12/RedFast.xcframework.zip",
+            checksum: "c448a9368c11daad56a4b75c3e01a145f5e8cafdb6ff73eb3f1cc15178f6639a"),
     ]
 )
