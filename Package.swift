@@ -32,7 +32,7 @@ let package = Package(
             resources: [
                 .process("Resources")
             ],
-            url: "https://github.com/redfast/redfast-sdk/releases/download/1.0.12/RedFast.xcframework.zip",
+            url: "https://github.com/redfast/redfast-sdk/releases/download/1.0.14/RedFast.xcframework.zip",
             checksum: "c448a9368c11daad56a4b75c3e01a145f5e8cafdb6ff73eb3f1cc15178f6639a"),
         .binaryTarget(
             name: "RedFast_TV",
@@ -40,7 +40,7 @@ let package = Package(
             resources: [
                 .process("Resources")
             ],
-            url: "https://github.com/redfast/redfast-sdk/releases/download/1.0.12/RedFast.xcframework.zip",
+            url: "https://github.com/redfast/redfast-sdk/releases/download/1.0.14/RedFast.xcframework.zip",
             checksum: "c448a9368c11daad56a4b75c3e01a145f5e8cafdb6ff73eb3f1cc15178f6639a"),
     ]
 )
